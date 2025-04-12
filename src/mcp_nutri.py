@@ -12,12 +12,6 @@ mcp = FastMCP("nutrition-mcp")
 async def get_nutrition(food: str) -> dict:
     """
     Get nutrition facts for a given food using Open Food Facts.
-
-    Args:
-        food: Name of the food (e.g., "banana")
-
-    Returns:
-        Nutrition info (calories, fat, protein, sugar, etc.)
     """
     search_url = (
         f"https://world.openfoodfacts.org/cgi/search.pl?search_terms={food}"
@@ -62,6 +56,8 @@ def create_app():
         ]
     )
 
+app = create_app()
+
+
 if __name__ == "__main__":
-    app = create_app()
     uvicorn.run(app, host="0.0.0.0", port=8080)
