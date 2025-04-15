@@ -37,7 +37,7 @@ Returns a dictionary of nutrition facts for the specified food item. The data is
 2. **Run the server**
 
    ```bash
-   python server.py
+   python mcp_nutri.py
    ```
 
 3. **Use the tool**
